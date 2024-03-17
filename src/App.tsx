@@ -1,10 +1,10 @@
 import React from 'react';
-import { Body, Footer, Header } from './components/components';
+import { Main, Footer, Header } from './components/components';
 function App() {
   return (
     <>
       <Header/>
-      <Body/>
+      <Main/>
       <Footer/>
     </>
   );
