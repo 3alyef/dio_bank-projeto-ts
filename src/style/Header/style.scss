@@ -1,0 +1,13 @@
+$blue_is: #0035b9;
+$blue_jr: #0087bf;
+$golden_jr: #f1d460;
+header {
+    background-image: linear-gradient(to bottom, $blue_is, $blue_jr);
+    nav {
+        background-color: $blue_jr;
+        .link {
+            background-color: $golden_jr;
+            border-radius: 7px;
+        }
+    }
+}

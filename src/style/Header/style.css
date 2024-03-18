@@ -1,0 +1,10 @@
+header {
+  background-image: linear-gradient(to bottom, #0035b9, #0087bf);
+}
+header nav {
+  background-color: #0087bf;
+}
+header nav .link {
+  background-color: #f1d460;
+  border-radius: 7px;
+}/*# sourceMappingURL=style.css.map */

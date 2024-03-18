@@ -1,6 +1,8 @@
 import React from 'react';
-import { Main, Footer, Header } from './components/components';
-function App() {
+import './App.css';
+import { Header, Main, Footer } from './components/components';
+
+export default function App() {
   return (
     <>
       <Header/>
@@ -9,5 +11,3 @@ function App() {
     </>
   );
 }
-
-export default App;
