@@ -3,11 +3,30 @@ $blue_jr: #0087bf;
 $golden_jr: #f1d460;
 header {
     background-image: linear-gradient(to bottom, $blue_is, $blue_jr);
+    padding: .2em 0em;
+    gap: .5em;
+    h1 {
+        font-size: 1.5em;
+        font-weight: 400;
+        color: $golden_jr;
+    }
     nav {
+        width: 100%;
         background-color: $blue_jr;
+        display: flex;
+        padding: 0px 18px;
+        justify-content: space-around;
+        
         .link {
+            color: $golden_jr;
+            padding: 12px;
+            cursor: pointer;
+        };
+
+        .link:hover {
+            color: $blue_jr;   
             background-color: $golden_jr;
-            border-radius: 7px;
+
         }
     }
 }

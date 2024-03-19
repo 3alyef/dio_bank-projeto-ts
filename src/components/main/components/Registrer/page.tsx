@@ -1,31 +1,53 @@
 import React from 'react';
 interface propsRg {
-    userType: string,
-    user?: string,
-    setUser: React.Dispatch<React.SetStateAction<string>>,
+    userType: number, // 0 === Login; 1 === Cadastro
+    name?: string,
+    setName?: React.Dispatch<React.SetStateAction<string>> | any,
+    email?: string,
+    setEmail: React.Dispatch<React.SetStateAction<string>>,
     password?: string,
-    setPassword: React.Dispatch<React.SetStateAction<string>>
+    setPassword: React.Dispatch<React.SetStateAction<string>>,
+    password2?: string,
+    setPassword2?: React.Dispatch<React.SetStateAction<string>> | any
+
 }
 
-export const Registrer = ({userType, user, setUser, password, setPassword}: propsRg)=>{
+export const Registrer = ({userType, password, setPassword, email, setEmail, password2, setPassword2, name, setName}: propsRg)=>{
     return(
         <>
-            <div>
-                <h1>Login</h1>
-                <div>
+            <div className='cardRegistrer'>
+                <h2>{userType === 1?"Cadastro":"Login"} :</h2>
+                <div className='cardForm'>
                     <form action="#" method="post">
                         <fieldset>
+                            {
+                                userType === 1&&(
+                                    <div className='UsCamp'>
+                                    <label htmlFor="nameUser">Name:</label>
+                                    <input type="name" id="nameUser" value={name} onChange={(e)=>setName(e.target.value)}/>
+                                    </div>
+                                )
+                            }
                             <div className='emailUsCamp'>
                                 <label htmlFor="email">Email</label>
-                                <input type={userType} id="emailUser" value={user} onChange={(e)=>setUser(e.target.value)}/>
+                                <input type="email" id="emailUser" value={email} onChange={(e)=>setEmail(e.target.value)}/>
                             </div>
                             <div className="passwordCamp">
-                                <label htmlFor="password">Password</label>
+                                <label htmlFor="password">Password:</label>
                                 <input type="password" id="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
                             </div>
+
+                            {
+                                userType === 1&&(
+                                    <div className="passwordCamp">
+                                        <label htmlFor="password2">Repeat your password:</label>
+                                        <input type="password" id="password" value={password2} onChange={(e)=>setPassword2(e.target.value)}/>
+                                    </div>
+                                )
+                            }
                         </fieldset>
 
-                        <input type='submit' value={userType === 'password'? 'Login': 'Criar conta'}/>
+                        <input type='submit' value={userType === 1? 'Criar conta' : 'Login'}/>
 
                     </form>
                 </div>

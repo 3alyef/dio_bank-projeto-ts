@@ -1,7 +1,46 @@
+main {
+  background-color: black;
+}
 main .Home {
-  width: 300px;
-  aspect-ratio: 1/1.2;
+  background-color: #0087bf;
+  width: 350px;
+  aspect-ratio: 1/1.15;
+  border-radius: 10px;
+  padding: 10px;
 }
 main .Home h1 {
   font-size: 1em;
+}
+main .cardRegistrer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .cardRegistrer h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+main .cardRegistrer .cardForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main .cardRegistrer .cardForm form fieldset div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .cardRegistrer .cardForm form input[type=submit] {
+  padding: 10px;
+  background-color: #0035b9;
+  color: #f1d460;
+  border-radius: 10px;
+  cursor: pointer;
+}
+main .cardRegistrer .cardForm form input[type=submit]:hover {
+  background-color: #0087bf;
+  color: #f1d460;
 }/*# sourceMappingURL=style.css.map */

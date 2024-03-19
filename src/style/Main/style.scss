@@ -3,10 +3,13 @@ $blue_jr: #0087bf;
 $golden_jr: #f1d460;
 
 main {
+    background-color: black;
     .Home {
-        width: 300px;
-        aspect-ratio: 1/1.2;
-
+        background-color: $blue_jr;
+        width: 350px;
+        aspect-ratio: 1/1.15;
+        border-radius: 10px;
+        padding: 10px;
         h1 {
             font-size: 1em;
 
@@ -14,4 +17,44 @@ main {
 
         
     }   
+
+    .cardRegistrer {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+        .cardForm {
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                fieldset {
+                    div {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                }
+
+                input[type="submit"]{
+                    padding: 10px;
+                    background-color: $blue_is;
+                    color: $golden_jr;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+
+                input[type="submit"]:hover{
+                    background-color: $blue_jr;
+                    color: $golden_jr;
+                }
+            }
+        }
+    }
 }

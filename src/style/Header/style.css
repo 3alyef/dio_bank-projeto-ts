@@ -1,10 +1,26 @@
 header {
   background-image: linear-gradient(to bottom, #0035b9, #0087bf);
+  padding: 0.2em 0em;
+  gap: 0.5em;
+}
+header h1 {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #f1d460;
 }
 header nav {
+  width: 100%;
   background-color: #0087bf;
+  display: flex;
+  padding: 0px 18px;
+  justify-content: space-around;
 }
 header nav .link {
+  color: #f1d460;
+  padding: 12px;
+  cursor: pointer;
+}
+header nav .link:hover {
+  color: #0087bf;
   background-color: #f1d460;
-  border-radius: 7px;
 }/*# sourceMappingURL=style.css.map */
