@@ -1,11 +1,13 @@
 import React from 'react';
+import { login } from '../../../../services/login/login';
+import { cadastro } from '../../../../services/cadastro/cadastro';
 interface propsRg {
     userType: number, // 0 === Login; 1 === Cadastro
     name?: string,
     setName?: React.Dispatch<React.SetStateAction<string>> | any,
-    email?: string,
+    email: string,
     setEmail: React.Dispatch<React.SetStateAction<string>>,
-    password?: string,
+    password: string,
     setPassword: React.Dispatch<React.SetStateAction<string>>,
     password2?: string,
     setPassword2?: React.Dispatch<React.SetStateAction<string>> | any
@@ -13,18 +15,29 @@ interface propsRg {
 }
 
 export const Registrer = ({userType, password, setPassword, email, setEmail, password2, setPassword2, name, setName}: propsRg)=>{
+
+    const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>)=>{
+        e.preventDefault()
+        if( userType === 1 ){
+            cadastro({password, email, userName: name })
+        } else {
+            login({ password, email })
+        }
+        
+    }
+
     return(
         <>
             <div className='cardRegistrer'>
                 <h2>{userType === 1?"Cadastro":"Login"} :</h2>
                 <div className='cardForm'>
-                    <form action="#" method="post">
+                    <form onSubmit={handleOnSubmit}>
                         <fieldset>
                             {
                                 userType === 1&&(
                                     <div className='UsCamp'>
                                     <label htmlFor="nameUser">Name:</label>
-                                    <input type="name" id="nameUser" value={name} onChange={(e)=>setName(e.target.value)}/>
+                                    <input type="text" id="nameUser" value={name} onChange={(e)=>setName(e.target.value)}/>
                                     </div>
                                 )
                             }
