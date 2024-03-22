@@ -1,3 +1,4 @@
+import { NavigateFunction } from "react-router-dom"
 
 interface cadastroProps {
     password?: string, 
