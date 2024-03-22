@@ -7,6 +7,8 @@ Desenvolvido por [Alef A. Araujo](https://github.com/3alyef)
 ### Tecnologias
 - Typescript
 
+[API (backend) utilizado](https://github.com/3alyef/dio_bank-projeto-ts_api)
+
 ### Como rodar o projeto
 
 1 - Clone o repositório
